@@ -41,6 +41,8 @@ public class YatzyTest {
     }
 
     @Test
+    @Tag("twos")
+    @DisplayName("Cuenta los doses y los suma a la variable suma para saber el total de unos")
     public void testTwos() {
         assertEquals(4, Yatzy.twos(1,2,3,2,6));
         assertEquals(10, Yatzy.twos(2,2,2,2,2));
@@ -48,6 +50,8 @@ public class YatzyTest {
     }
 
     @Test
+    @Tag("threes")
+    @DisplayName("Cuenta los numeros tres y los suma a la variable suma para saber el total de unos")
     public void testThrees() {
         assertEquals(6, Yatzy.threes(1,2,3,2,3));
         assertEquals(12, Yatzy.threes(2,3,3,3,3));
@@ -55,18 +59,21 @@ public class YatzyTest {
     }
 
     @Test
-    public void testFours()
-    {
-        assertEquals(12, new Yatzy.fours(4,4,4,5,5).fours());
-        assertEquals(8, new Yatzy.fours(4,4,5,5,5).fours());
-        assertEquals(4, new Yatzy.fours(4,5,5,5,5).fours());
+    @Tag("ones")
+    @DisplayName("Cuenta los cuatros y los suma a la variable suma para saber el total de unos")
+    public void testFours() {
+        assertEquals(12, Yatzy.fours(4,4,4,5,5));
+        assertEquals(8, Yatzy.fours(4,4,5,5,5));
+        assertEquals(4, Yatzy.fours(4,5,5,5,5));
     }
 
     @Test
-    public void fives() {
-        assertEquals(10, new Yatzy(4,4,4,5,5).fives());
-        assertEquals(15, new Yatzy(4,4,5,5,5).fives());
-        assertEquals(20, new Yatzy(4,5,5,5,5).fives());
+    @Tag("fives")
+    @DisplayName("Cuenta los cincos y los suma a la variable suma para saber el total de unos")
+    public void testFives() {
+        assertEquals(10, Yatzy.fives(4,4,4,5,5));
+        assertEquals(15, Yatzy.fives(4,4,5,5,5));
+        assertEquals(20, Yatzy.fives(4,5,5,5,5));
     }
 
     @Test
