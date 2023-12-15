@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import org.example.Yatzy;
@@ -19,6 +20,8 @@ public class YatzyTest {
     }
 
     @Test
+    @Tag("ones")
+    @DisplayName("Cuenta los unos y los suma a la variable suma para saber el total de unos")
     public void yatzy_scores_50() {
         int expected = 50;
         int actual = Yatzy.yatzy(4,4,4,4,4);
