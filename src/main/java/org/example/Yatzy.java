@@ -66,19 +66,20 @@ public class Yatzy {
     public static int fives(int... dice) {
         int sum = 0;
         for (int die : dice) {
-            if (die == 4) {
+            if (die == 5) {
                 sum++;
             }
         }
         return sum;
     }
 
-    public int sixes()
-    {
+    public static int sixes(int... dice) {
         int sum = 0;
-        for (int at = 0; at < dice.length; at++)
-            if (dice[at] == 6)
-                sum = sum + 6;
+        for (int die : dice) {
+            if (die == 6) {
+                sum++;
+            }
+        }
         return sum;
     }
 

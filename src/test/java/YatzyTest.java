@@ -42,7 +42,7 @@ public class YatzyTest {
 
     @Test
     @Tag("twos")
-    @DisplayName("Cuenta los doses y los suma a la variable suma para saber el total de unos")
+    @DisplayName("Cuenta los doses y los suma a la variable suma para saber el total de doses")
     public void testTwos() {
         assertEquals(4, Yatzy.twos(1,2,3,2,6));
         assertEquals(10, Yatzy.twos(2,2,2,2,2));
@@ -51,7 +51,7 @@ public class YatzyTest {
 
     @Test
     @Tag("threes")
-    @DisplayName("Cuenta los numeros tres y los suma a la variable suma para saber el total de unos")
+    @DisplayName("Cuenta los numeros tres y los suma a la variable suma para saber el total de treses")
     public void testThrees() {
         assertEquals(6, Yatzy.threes(1,2,3,2,3));
         assertEquals(12, Yatzy.threes(2,3,3,3,3));
@@ -60,7 +60,7 @@ public class YatzyTest {
 
     @Test
     @Tag("ones")
-    @DisplayName("Cuenta los cuatros y los suma a la variable suma para saber el total de unos")
+    @DisplayName("Cuenta los cuatros y los suma a la variable suma para saber el total de cuatros")
     public void testFours() {
         assertEquals(12, Yatzy.fours(4,4,4,5,5));
         assertEquals(8, Yatzy.fours(4,4,5,5,5));
@@ -69,7 +69,7 @@ public class YatzyTest {
 
     @Test
     @Tag("fives")
-    @DisplayName("Cuenta los cincos y los suma a la variable suma para saber el total de unos")
+    @DisplayName("Cuenta los cincos y los suma a la variable suma para saber el total de cincos")
     public void testFives() {
         assertEquals(10, Yatzy.fives(4,4,4,5,5));
         assertEquals(15, Yatzy.fives(4,4,5,5,5));
@@ -77,10 +77,12 @@ public class YatzyTest {
     }
 
     @Test
-    public void sixes_test() {
-        assertEquals(0, new Yatzy(4,4,4,5,5).sixes());
-        assertEquals(6, new Yatzy(4,4,6,5,5).sixes());
-        assertEquals(18, new Yatzy(6,5,6,6,5).sixes());
+    @Tag("sixes")
+    @DisplayName("Cuenta numeros seis y los suma a la variable suma para saber el total de seises")
+    public void sixesTest() {
+        assertEquals(0, Yatzy.sixes(4,4,4,5,5));
+        assertEquals(6, Yatzy.sixes(4,4,6,5,5));
+        assertEquals(18, Yatzy.sixes(6,5,6,6,5));
     }
 
     @Test
