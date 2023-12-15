@@ -55,11 +55,11 @@ public class YatzyTest {
     }
 
     @Test
-    public void fours_test() 
+    public void testFours()
     {
-        assertEquals(12, new Yatzy(4,4,4,5,5).fours());
-        assertEquals(8, new Yatzy(4,4,5,5,5).fours());
-        assertEquals(4, new Yatzy(4,5,5,5,5).fours());
+        assertEquals(12, new Yatzy.fours(4,4,4,5,5).fours());
+        assertEquals(8, new Yatzy.fours(4,4,5,5,5).fours());
+        assertEquals(4, new Yatzy.fours(4,5,5,5,5).fours());
     }
 
     @Test
