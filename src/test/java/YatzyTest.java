@@ -20,8 +20,8 @@ public class YatzyTest {
     }
 
     @Test
-    @Tag("ones")
-    @DisplayName("Cuenta los unos y los suma a la variable suma para saber el total de unos")
+    @Tag("yatzy")
+    @DisplayName("Comprueba que el valor de todos los dados sea el mismo")
     public void yatzy_scores_50() {
         int expected = 50;
         int actual = Yatzy.yatzy(4,4,4,4,4);
@@ -31,7 +31,9 @@ public class YatzyTest {
     }
 
     @Test
-    public void test_1s() {
+    @Tag("ones")
+    @DisplayName("Cuenta los unos y los suma a la variable suma para saber el total de unos")
+    public void testOnes() {
         assertTrue(Yatzy.ones(1,2,3,4,5) == 1);
         assertEquals(2, Yatzy.ones(1,2,1,4,5));
         assertEquals(0, Yatzy.ones(6,2,2,4,5));
@@ -39,9 +41,10 @@ public class YatzyTest {
     }
 
     @Test
-    public void test_2s() {
+    public void testTwos() {
         assertEquals(4, Yatzy.twos(1,2,3,2,6));
         assertEquals(10, Yatzy.twos(2,2,2,2,2));
+        assertEquals(6, Yatzy.twos(2,2,2,5,6));
     }
 
     @Test
