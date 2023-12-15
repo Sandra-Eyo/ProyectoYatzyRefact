@@ -3,14 +3,12 @@ package org.example;
 
 public class Yatzy {
 
-    public static int chance(int d1, int d2, int d3, int d4, int d5)
+    public static int chance(int... diceValues)
     {
         int total = 0;
-        total += d1;
-        total += d2;
-        total += d3;
-        total += d4;
-        total += d5;
+        for (int value : diceValues) {
+            total += value;
+        }
         return total;
     }
 
