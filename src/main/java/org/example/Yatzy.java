@@ -43,15 +43,14 @@ public class Yatzy {
         return sum;
     }
 
-    public static int threes(int d1, int d2, int d3, int d4, int d5) {
-        int s;
-        s = 0;
-        if (d1 == 3) s += 3;
-        if (d2 == 3) s += 3;
-        if (d3 == 3) s += 3;
-        if (d4 == 3) s += 3;
-        if (d5 == 3) s += 3;
-        return s;
+    public static int threes(int... dice) {
+        int sum = 0;
+        for (int die : dice) {
+            if (die == 3) {
+                sum++;
+            }
+        }
+        return sum;
     }
 
     protected int[] dice;
