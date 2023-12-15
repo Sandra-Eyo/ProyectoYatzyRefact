@@ -11,7 +11,6 @@ public class YatzyTest {
 
     @Test
     @Tag("chance")
-    @DisplayName("The player strores sum of all dice, no matter what they read")
     public void chance_scores_sum_of_all_dice() {
         int expected = 15;
         int actual = Yatzy.chance(2,3,4,5,1);
@@ -21,7 +20,6 @@ public class YatzyTest {
 
     @Test
     @Tag("yatzy")
-    @DisplayName("Comprueba que el valor de todos los dados sea el mismo")
     public void yatzy_scores_50() {
         int expected = 50;
         int actual = Yatzy.yatzy(4,4,4,4,4);
@@ -32,7 +30,6 @@ public class YatzyTest {
 
     @Test
     @Tag("ones")
-    @DisplayName("Cuenta los unos y los suma a la variable suma para saber el total de unos")
     public void testOnes() {
         assertTrue(Yatzy.ones(1,2,3,4,5) == 1);
         assertEquals(2, Yatzy.ones(1,2,1,4,5));
@@ -42,7 +39,6 @@ public class YatzyTest {
 
     @Test
     @Tag("twos")
-    @DisplayName("Cuenta los doses y los suma a la variable suma para saber el total de doses")
     public void testTwos() {
         assertEquals(4, Yatzy.twos(1,2,3,2,6));
         assertEquals(10, Yatzy.twos(2,2,2,2,2));
@@ -51,7 +47,6 @@ public class YatzyTest {
 
     @Test
     @Tag("threes")
-    @DisplayName("Cuenta los numeros tres y los suma a la variable suma para saber el total de treses")
     public void testThrees() {
         assertEquals(6, Yatzy.threes(1,2,3,2,3));
         assertEquals(12, Yatzy.threes(2,3,3,3,3));
@@ -60,7 +55,6 @@ public class YatzyTest {
 
     @Test
     @Tag("ones")
-    @DisplayName("Cuenta los cuatros y los suma a la variable suma para saber el total de cuatros")
     public void testFours() {
         assertEquals(12, Yatzy.fours(4,4,4,5,5));
         assertEquals(8, Yatzy.fours(4,4,5,5,5));
@@ -69,7 +63,6 @@ public class YatzyTest {
 
     @Test
     @Tag("fives")
-    @DisplayName("Cuenta los cincos y los suma a la variable suma para saber el total de cincos")
     public void testFives() {
         assertEquals(10, Yatzy.fives(4,4,4,5,5));
         assertEquals(15, Yatzy.fives(4,4,5,5,5));
@@ -78,7 +71,6 @@ public class YatzyTest {
 
     @Test
     @Tag("sixes")
-    @DisplayName("Cuenta numeros seis y los suma a la variable suma para saber el total de seises")
     public void sixesTest() {
         assertEquals(0, Yatzy.sixes(4,4,4,5,5));
         assertEquals(6, Yatzy.sixes(4,4,6,5,5));
